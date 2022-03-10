@@ -53,7 +53,7 @@
         </dependency>
 
         <dependency>
-            <groupId>com.github.alexeymajor</groupId>
+            <groupId>ru.avm</groupId>
             <artifactId>common</artifactId>
             <version>0.0.1</version>
             <scope>compile</scope>
