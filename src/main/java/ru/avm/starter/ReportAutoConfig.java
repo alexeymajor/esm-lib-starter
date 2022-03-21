@@ -13,6 +13,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import ru.avm.reports.ReportConfig;
 import ru.avm.reports.ReportController;
 import ru.avm.reports.ReportService;
+import ru.avm.security.acl.admin.AdminService;
 
 @RequiredArgsConstructor
 
@@ -26,11 +27,12 @@ import ru.avm.reports.ReportService;
 public class ReportAutoConfig {
 
     private final ReportService reportService;
+    private final AdminService adminService;
 
     @Bean
     @ConditionalOnProperty(prefix = "app.report", name = "rest-controller", havingValue = "true", matchIfMissing = true)
     public ReportController reportController() {
-        return new ReportController(reportService);
+        return new ReportController(reportService, adminService);
     }
 
 }

@@ -10,13 +10,18 @@
     </parent>
     <groupId>ru.avm</groupId>
     <artifactId>starter</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
     <name>starter</name>
     <description>starter</description>
     <properties>
         <java.version>11</java.version>
         <spring-cloud.version>2021.0.0</spring-cloud.version>
         <com.vladmihalcea.hibernate-types-55>2.14.0</com.vladmihalcea.hibernate-types-55>
+        <avm.common>0.0.1</avm.common>
+        <avm.security>0.0.2</avm.security>
+        <avm.reports>0.0.2</avm.reports>
+        <avm.stomp>0.0.2</avm.stomp>
+        <avm.profile>0.0.1</avm.profile>
     </properties>
     <dependencies>
         <dependency>
@@ -55,14 +60,12 @@
         <dependency>
             <groupId>ru.avm</groupId>
             <artifactId>common</artifactId>
-            <version>0.0.1</version>
-            <scope>compile</scope>
+            <version>${avm.common}</version>
         </dependency>
         <dependency>
             <groupId>ru.avm</groupId>
             <artifactId>profile</artifactId>
-            <version>0.0.1</version>
-            <scope>compile</scope>
+            <version>${avm.profile}</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -71,20 +74,17 @@
         <dependency>
             <groupId>ru.avm</groupId>
             <artifactId>stomp</artifactId>
-            <version>0.0.2</version>
-            <scope>compile</scope>
+            <version>${avm.stomp}</version>
         </dependency>
         <dependency>
             <groupId>ru.avm</groupId>
             <artifactId>security</artifactId>
-            <version>0.0.2</version>
-            <scope>compile</scope>
+            <version>${avm.security}</version>
         </dependency>
         <dependency>
             <groupId>ru.avm</groupId>
             <artifactId>reports</artifactId>
-            <version>0.0.1</version>
-            <scope>compile</scope>
+            <version>${avm.reports}</version>
         </dependency>
     </dependencies>
 
