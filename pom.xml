@@ -19,7 +19,7 @@
         <com.vladmihalcea.hibernate-types-55>2.14.0</com.vladmihalcea.hibernate-types-55>
         <avm.common>0.0.1</avm.common>
         <avm.security>0.0.3</avm.security>
-        <avm.reports>0.0.2</avm.reports>
+        <avm.reports>0.0.3</avm.reports>
         <avm.stomp>0.0.2</avm.stomp>
         <avm.profile>0.0.1</avm.profile>
     </properties>
