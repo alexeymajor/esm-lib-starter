@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import ru.avm.stomp.StompConfig;
+import ru.avm.stomp.StompProperties;
 import ru.avm.stomp.TrustStompSubscriptionAuthenticator;
 
 @Configuration
