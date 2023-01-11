@@ -5,23 +5,23 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.13</version>
+        <version>2.6.14</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>ru.avm</groupId>
     <artifactId>starter</artifactId>
-    <version>0.1.1</version>
+    <version>1.0.0</version>
     <name>starter</name>
     <description>starter</description>
     <properties>
         <java.version>11</java.version>
-        <spring-cloud.version>2021.0.0</spring-cloud.version>
-        <com.vladmihalcea.hibernate-types-55>2.20.0</com.vladmihalcea.hibernate-types-55>
-        <avm.common>0.0.2</avm.common>
-        <avm.security>0.1.1</avm.security>
-        <avm.reports>0.0.4</avm.reports>
-        <avm.stomp>0.0.3</avm.stomp>
-        <avm.profile>0.0.2</avm.profile>
+        <spring-cloud.version>2021.0.5</spring-cloud.version>
+        <com.vladmihalcea.hibernate-types-55>2.21.1</com.vladmihalcea.hibernate-types-55>
+        <avm.common>1.0.0</avm.common>
+        <avm.security>1.0.0</avm.security>
+        <avm.reports>1.0.0</avm.reports>
+        <avm.stomp>1.0.0</avm.stomp>
+        <avm.profile>1.0.0</avm.profile>
     </properties>
     <dependencies>
         <dependency>
@@ -56,7 +56,6 @@
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
 
-        <!--suppress VulnerableLibrariesLocal -->
         <dependency>
             <groupId>ru.avm</groupId>
             <artifactId>common</artifactId>
