@@ -10,7 +10,7 @@
     </parent>
     <groupId>ru.avm</groupId>
     <artifactId>starter</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <name>starter</name>
     <description>starter</description>
     <properties>
@@ -19,9 +19,9 @@
         <com.vladmihalcea.hibernate-types-55>2.21.1</com.vladmihalcea.hibernate-types-55>
         <avm.common>1.0.0</avm.common>
         <avm.security>1.0.0</avm.security>
-        <avm.reports>1.0.0</avm.reports>
+        <avm.reports>1.0.1</avm.reports>
         <avm.stomp>1.0.0</avm.stomp>
-        <avm.profile>1.0.0</avm.profile>
+        <avm.profile>1.0.1</avm.profile>
     </properties>
     <dependencies>
         <dependency>

@@ -10,9 +10,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import ru.avm.reports.ReportConfig;
-import ru.avm.reports.ReportController;
-import ru.avm.reports.ReportService;
+import ru.avm.profile.ProfileService;
+import ru.avm.reports.*;
+import ru.avm.reports.repository.ReportRepository;
 import ru.avm.security.acl.admin.AdminService;
 
 @RequiredArgsConstructor
@@ -28,11 +28,31 @@ public class ReportAutoConfig {
 
     private final ReportService reportService;
     private final AdminService adminService;
+    private final ReportMapper reportMapper;
+    private final ReportRepository reportRepository;
+    private final ProfileService profileService;
 
     @Bean
     @ConditionalOnProperty(prefix = "app.report", name = "rest-controller", havingValue = "true", matchIfMissing = true)
     public ReportController reportController() {
-        return new ReportController(reportService, adminService);
+        return ReportController.builder()
+                .reportRepository(reportRepository)
+                .reportMapper(reportMapper)
+                .reportService(reportService)
+                .adminService(adminService)
+                .build();
+    }
+
+    @Bean
+    @ConditionalOnProperty(prefix = "app.report", name = "rest-controller", havingValue = "true", matchIfMissing = true)
+    public ReportEditController reportEditController() {
+        return ReportEditController.builder()
+                .reportRepository(reportRepository)
+                .profileService(profileService)
+                .reportMapper(reportMapper)
+                .reportService(reportService)
+                .adminService(adminService)
+                .build();
     }
 
 }
