@@ -10,18 +10,18 @@
     </parent>
     <groupId>ru.avm</groupId>
     <artifactId>starter</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <name>starter</name>
     <description>starter</description>
     <properties>
         <java.version>11</java.version>
         <spring-cloud.version>2021.0.5</spring-cloud.version>
         <com.vladmihalcea.hibernate-types-55>2.21.1</com.vladmihalcea.hibernate-types-55>
-        <avm.common>1.0.3</avm.common>
-        <avm.security>1.0.3</avm.security>
-        <avm.reports>1.0.3</avm.reports>
-        <avm.stomp>1.0.3</avm.stomp>
-        <avm.profile>1.0.3</avm.profile>
+        <avm.common>1.0.4</avm.common>
+        <avm.security>1.0.4</avm.security>
+        <avm.reports>1.0.4</avm.reports>
+        <avm.stomp>1.0.4</avm.stomp>
+        <avm.profile>1.0.4</avm.profile>
     </properties>
     <dependencies>
         <dependency>
