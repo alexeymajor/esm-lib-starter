@@ -38,6 +38,9 @@ public class NetworkAutoConfig {
     @Value("${spring.application.name}")
     private String applicationName;
 
+    @SuppressWarnings("UastIncorrectHttpHeaderInspection")
+    private static final String X_AUTH_HEADER = "X-Auth-User";
+
     @Bean
     public AuthUserDto serviceUser() {
         return AuthUserDto.builder()
@@ -56,7 +59,7 @@ public class NetworkAutoConfig {
 
     @Bean
     public RequestInterceptor requestInterceptor() {
-        return requestTemplate -> requestTemplate.header("X-Auth-User", serviceAuthString());
+        return requestTemplate -> requestTemplate.header(X_AUTH_HEADER, serviceAuthString());
     }
 
     @Bean
@@ -65,7 +68,7 @@ public class NetworkAutoConfig {
         restTemplate.setInterceptors(
                 new ArrayList<>(
                         List.of((request, body, execution) -> {
-                            request.getHeaders().add("X-Auth-User", serviceAuthString());
+                            request.getHeaders().add(X_AUTH_HEADER, serviceAuthString());
                             return execution.execute(request, body);
                         }))
         );
