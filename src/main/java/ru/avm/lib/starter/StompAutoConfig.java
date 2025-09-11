@@ -1,17 +1,17 @@
-package ru.avm.starter;
+package ru.avm.lib.starter;
 
+import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-import ru.avm.stomp.StompConfig;
-import ru.avm.stomp.StompProperties;
-import ru.avm.stomp.TrustStompSubscriptionAuthenticator;
+import ru.avm.lib.stomp.StompConfig;
+import ru.avm.lib.stomp.StompProperties;
+import ru.avm.lib.stomp.TrustStompSubscriptionAuthenticator;
 
-@Configuration
+@AutoConfiguration
 @ConditionalOnProperty(prefix = "app.stomp", name = "disabled", havingValue = "false", matchIfMissing = true)
 @EnableConfigurationProperties(StompProperties.class)
 @AutoConfigureAfter(SecurityAutoConfiguration.class)

@@ -1,4 +1,4 @@
-package ru.avm.starter;
+package ru.avm.lib.starter;
 
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;

@@ -1,4 +1,4 @@
-package ru.avm.starter;
+package ru.avm.lib.starter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import feign.RequestInterceptor;
@@ -9,6 +9,7 @@ import lombok.val;
 import org.bouncycastle.util.encoders.Base64;
 import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.autoconfigure.http.HttpMessageConverters;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -16,18 +17,17 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.cloud.openfeign.support.ResponseEntityDecoder;
 import org.springframework.cloud.openfeign.support.SpringDecoder;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestOperations;
 import org.springframework.web.client.RestTemplate;
-import ru.avm.common.dto.AuthUserDto;
-import ru.avm.common.dto.AuthorityDto;
+import ru.avm.lib.common.dto.AuthUserDto;
+import ru.avm.lib.common.dto.AuthorityDto;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @RequiredArgsConstructor
-@Configuration
+@AutoConfiguration
 @ConditionalOnProperty(prefix = "app.network", name = "disabled", havingValue = "false", matchIfMissing = true)
 @EnableConfigurationProperties(NetworkProperties.class)
 @EnableFeignClients("ru.avm")
@@ -45,7 +45,10 @@ public class NetworkAutoConfig {
     public AuthUserDto serviceUser() {
         return AuthUserDto.builder()
                 .id(1_000_001L)
-                .authorities(List.of(new AuthorityDto("SCOPE_SERVICE")))
+                .authorities(List.of(AuthorityDto
+                        .builder()
+                        .authority("SCOPE_SERVICE")
+                        .build()))
                 .name(applicationName)
                 .sid(applicationName)
                 .build();
@@ -75,7 +78,6 @@ public class NetworkAutoConfig {
         return restTemplate;
     }
 
-    @SuppressWarnings("deprecation")
     @Bean
     public Decoder feignDecoder() {
         ObjectFactory<HttpMessageConverters> objectFactory = () ->

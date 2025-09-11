@@ -1,12 +1,12 @@
-package ru.avm.starter;
+package ru.avm.lib.starter;
 
+import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-import ru.avm.common.SchedulerConfig;
+import ru.avm.lib.common.SchedulerConfig;
 
-@Configuration
+@AutoConfiguration
 @ConditionalOnProperty(prefix = "app.scheduler", name = "disabled", havingValue = "false", matchIfMissing = true)
 @Import(SchedulerConfig.class)
 @EnableConfigurationProperties(SchedulerProperties.class)

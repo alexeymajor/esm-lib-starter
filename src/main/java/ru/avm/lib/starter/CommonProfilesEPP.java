@@ -1,4 +1,4 @@
-package ru.avm.starter;
+package ru.avm.lib.starter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.env.EnvironmentPostProcessor;

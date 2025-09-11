@@ -1,13 +1,13 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  ru.avm.starter.SchedulerAutoConfig,\
-  ru.avm.starter.NetworkAutoConfig,\
-  ru.avm.starter.RabbitAutoConfig,\
-  ru.avm.starter.JpaAutoConfig,\
-  ru.avm.starter.ProfileAutoConfig,\
-  ru.avm.starter.StompAutoConfig,\
-  ru.avm.starter.ReportAutoConfig,\
-  ru.avm.starter.SecurityAutoConfig
+  ru.avm.lib.starter.SchedulerAutoConfig,\
+  ru.avm.lib.starter.NetworkAutoConfig,\
+  ru.avm.lib.starter.RabbitAutoConfig,\
+  ru.avm.lib.starter.JpaAutoConfig,\
+  ru.avm.lib.starter.ProfileAutoConfig,\
+  ru.avm.lib.starter.StompAutoConfig,\
+  ru.avm.lib.starter.ReportAutoConfig,\
+  ru.avm.lib.starter.SecurityAutoConfig
 org.springframework.context.ApplicationContextInitializer=\
-  ru.avm.starter.CommonApplicationContextInitializer
+  ru.avm.lib.starter.CommonApplicationContextInitializer
 org.springframework.boot.env.EnvironmentPostProcessor=\
-  ru.avm.starter.CommonProfilesEPP
+  ru.avm.lib.starter.CommonProfilesEPP

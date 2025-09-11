@@ -3,35 +3,23 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.15</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>ru.avm.lib</groupId>
+        <artifactId>parent-pom</artifactId>
+        <version>1.1.9</version>
+        <relativePath/>
     </parent>
-    <groupId>ru.avm</groupId>
     <artifactId>starter</artifactId>
-    <version>1.0.9</version>
+    <version>1.1.9</version>
     <name>starter</name>
     <description>starter</description>
-    <properties>
-        <java.version>11</java.version>
-        <spring-cloud.version>2021.0.9</spring-cloud.version>
-        <com.vladmihalcea.hibernate-types-55>2.21.1</com.vladmihalcea.hibernate-types-55>
-        <avm.common>1.0.9</avm.common>
-        <avm.security>1.0.9</avm.security>
-        <avm.reports>1.0.9</avm.reports>
-        <avm.stomp>1.0.9</avm.stomp>
-        <avm.profile>1.0.9</avm.profile>
-    </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.vladmihalcea</groupId>
-            <artifactId>hibernate-types-55</artifactId>
-            <version>${com.vladmihalcea.hibernate-types-55}</version>
+            <groupId>io.hypersistence</groupId>
+            <artifactId>hypersistence-utils-hibernate-63</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -55,44 +43,30 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
-
         <dependency>
-            <groupId>ru.avm</groupId>
+            <groupId>ru.avm.lib</groupId>
             <artifactId>common</artifactId>
-            <version>${avm.common}</version>
         </dependency>
         <dependency>
-            <groupId>ru.avm</groupId>
+            <groupId>ru.avm.lib</groupId>
             <artifactId>profile</artifactId>
-            <version>${avm.profile}</version>
         </dependency>
         <dependency>
-            <groupId>ru.avm</groupId>
+            <groupId>ru.avm.lib</groupId>
             <artifactId>stomp</artifactId>
-            <version>${avm.stomp}</version>
         </dependency>
         <dependency>
-            <groupId>ru.avm</groupId>
+            <groupId>ru.avm.lib</groupId>
             <artifactId>security</artifactId>
-            <version>${avm.security}</version>
         </dependency>
         <dependency>
-            <groupId>ru.avm</groupId>
+            <groupId>ru.avm.lib</groupId>
             <artifactId>reports</artifactId>
-            <version>${avm.reports}</version>
         </dependency>
     </dependencies>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+    <build>
+        <finalName>${project.artifactId}</finalName>
+    </build>
 
 </project>

@@ -1,0 +1,8 @@
+ru.avm.lib.starter.SchedulerAutoConfig
+ru.avm.lib.starter.NetworkAutoConfig
+ru.avm.lib.starter.RabbitAutoConfig
+ru.avm.lib.starter.JpaAutoConfig
+ru.avm.lib.starter.ProfileAutoConfig
+ru.avm.lib.starter.StompAutoConfig
+ru.avm.lib.starter.ReportAutoConfig
+ru.avm.lib.starter.SecurityAutoConfig
