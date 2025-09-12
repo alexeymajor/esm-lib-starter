@@ -4,7 +4,7 @@ import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @Data
-@ConfigurationProperties(prefix = "app.scheduler")
-public class SchedulerProperties {
+@ConfigurationProperties(prefix = "app.exceptions")
+public class ExceptionsProperties {
     boolean disabled = false;
 }

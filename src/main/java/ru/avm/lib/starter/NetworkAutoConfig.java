@@ -21,7 +21,6 @@ import org.springframework.http.converter.json.MappingJackson2HttpMessageConvert
 import org.springframework.web.client.RestOperations;
 import org.springframework.web.client.RestTemplate;
 import ru.avm.lib.common.dto.AuthUserDto;
-import ru.avm.lib.common.dto.AuthorityDto;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,10 +44,7 @@ public class NetworkAutoConfig {
     public AuthUserDto serviceUser() {
         return AuthUserDto.builder()
                 .id(1_000_001L)
-                .authorities(List.of(AuthorityDto
-                        .builder()
-                        .authority("SCOPE_SERVICE")
-                        .build()))
+                .authority("SCOPE_SERVICE")
                 .name(applicationName)
                 .sid(applicationName)
                 .build();

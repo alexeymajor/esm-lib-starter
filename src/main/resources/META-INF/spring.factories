@@ -1,5 +1,7 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
   ru.avm.lib.starter.SchedulerAutoConfig,\
+  ru.avm.lib.starter.ExceptionsAutoConfig,\
+  ru.avm.lib.starter.TrailingSlashMatchesAutoConfig,\
   ru.avm.lib.starter.NetworkAutoConfig,\
   ru.avm.lib.starter.RabbitAutoConfig,\
   ru.avm.lib.starter.JpaAutoConfig,\
