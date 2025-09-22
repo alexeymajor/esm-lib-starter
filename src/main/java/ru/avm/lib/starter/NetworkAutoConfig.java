@@ -4,7 +4,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Import;
 import ru.avm.lib.common.NetworkConfig;
 
@@ -13,7 +12,6 @@ import ru.avm.lib.common.NetworkConfig;
 @ConditionalOnProperty(prefix = "app.network", name = "disabled", havingValue = "false", matchIfMissing = true)
 @EnableConfigurationProperties(NetworkProperties.class)
 @Import(NetworkConfig.class)
-@EnableFeignClients("ru.avm")
 public class NetworkAutoConfig {
 
 }
