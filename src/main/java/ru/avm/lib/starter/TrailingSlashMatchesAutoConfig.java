@@ -7,7 +7,6 @@ import lombok.val;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.context.annotation.Bean;
 
 import java.io.IOException;
 
@@ -37,7 +36,7 @@ public class TrailingSlashMatchesAutoConfig {
         }
     }
 
-    @Bean
+//    @Bean
     public Filter trailingSlashFilter() {
         return new TrailingSlashFilter();
     }
