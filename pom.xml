@@ -5,11 +5,11 @@
     <parent>
         <groupId>ru.avm.lib</groupId>
         <artifactId>parent-pom</artifactId>
-        <version>1.17.0</version>
+        <version>1.18.0</version>
         <relativePath/>
     </parent>
     <artifactId>starter</artifactId>
-    <version>1.17.0</version>
+    <version>1.18.0</version>
     <name>starter</name>
     <description>starter</description>
     <dependencies>
